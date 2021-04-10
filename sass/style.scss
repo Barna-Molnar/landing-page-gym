@@ -1,3 +1,5 @@
+@import './mixin.scss';
+
 /* FEATURES */
 
 .features {
@@ -5,6 +7,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin: 0 12rem;
+    @include respond(tab-land) {
+        margin: 0 6rem;
+    }
+    @include respond(tab-port) {
+        margin: 0 3rem;
+    }
     &__img {
         height: 100%;
         width: 100%;

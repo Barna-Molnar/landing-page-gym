@@ -1,9 +1,16 @@
+@import './mixin.scss';
 .gallery {
     background-color: #f9f7f6;
     display: grid;
     grid-template: repeat(7, 5vw) / repeat(8, 1fr);
     grid-gap: 1.5rem;
-    padding: 1.5rem;
+    margin: 0 12rem;
+    @include respond(tab-land) {
+        margin: 0 6rem;
+    }
+    @include respond(tab-port) {
+        margin: 0 3rem;
+    }
     &__item {
         &--1 {
             grid-row: 4 / 5;
