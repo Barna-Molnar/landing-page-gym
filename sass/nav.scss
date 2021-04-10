@@ -1,15 +1,16 @@
+@import './mixin.scss';
 .nav {
     /* background-color: red; */
     /* background-color: rgb(238, 235, 235); */
     width: 100%;
     height: 10rem;
-    padding: 0 10rem;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     p {
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         font-weight: 400;
         color: inherit;
     }
@@ -17,9 +18,16 @@
         display: flex;
         align-items: center;
         list-style: none;
+        // @include respond(tab-port) {
+        //     display: grid;
+        // }
     }
     .nav__item {
-        margin-left: 10rem;
+        margin-left: 5rem;
+    }
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -35,14 +43,14 @@
 
 .nav__link--btn:link,
 .nav__link--btn:visited {
-    padding: 0.8rem 5.5rem;
+    padding: 0.3rem 2.5rem;
     border-radius: 5rem;
     background-color: inherit;
     color: #222;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.5s;
-    box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.2);
-    /* background-image: linear-gradient(to right, rgb(241, 121, 121), #eef2f3); */
+    // box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: #ff585f;
 }
 
 .nav__link--btn:hover,
@@ -51,6 +59,7 @@
     box-shadow: 4px 0px 3px 2px rgba(0, 0, 0, 0.2);
     color: inherit;
     color: #333;
+    background-color: #fd424b;
 }
 
 .nav.sticky {
