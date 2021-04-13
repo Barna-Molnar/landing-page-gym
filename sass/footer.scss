@@ -1,0 +1,33 @@
+/* FOOTER */
+.footer {
+  padding: 10rem 3rem;
+  background-color: #37383d;
+  text-align: center;
+
+  &__icon {
+    font-size: 15rem;
+    color: #eee;
+
+    margin-bottom: 5rem;
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+  &__item {
+    margin-right: 4rem;
+  }
+  &__link {
+    font-size: 2rem;
+    color: #eee;
+    text-decoration: none;
+  }
+  &__copyright {
+    font-size: 1.4rem;
+    color: #aaa;
+    text-align: center;
+  }
+}

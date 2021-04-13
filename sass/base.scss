@@ -1,33 +1,21 @@
 @import './mixin.scss';
 :root {
-  --color-primary: #5ec576;
-  --color-secondary: #ffcb03;
-  --color-tertiary: #ff585f;
-  --color-primary-darker: #4bbb7d;
-  --color-secondary-darker: #ffbb00;
-  --color-tertiary-darker: #fd424b;
-  --color-primary-opacity: #5ec5763a;
-  --color-secondary-opacity: #ffcd0331;
-  --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+  --color-secondary: #101d2c;
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
+  --color-white: #fff;
+  --color-gray-dark: #777;
+  --color-gray-dark-2: #999;
+  --color-gray-dark-3: #333;
+  --color-black: #000;
+  --color-gray-light-1: #f7f7f7;
+  --color-gray-light-2: #eee;
 }
 
-// COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
-$color-secondary: #101d2c;
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
-$color-grey-dark-1: #54483a;
-$color-grey-dark-2: #6d5d4b;
-$color-white: #fff;
-$color-gray-dark: #777;
-$color-gray-dark-2: #999;
-$color-gray-dark-3: #333;
-$color-black: #000;
-$color-gray-light-1: #f7f7f7;
-$color-gray-light-2: #eee;
 * {
   margin: 0;
   padding: 0;
