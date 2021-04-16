@@ -11,3 +11,20 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     }
 });
 
+// Navigation sticky
+
+const header = document.querySelector('.header')
+const nav = document.querySelector('.nav')
+const navheight = nav.getBoundingClientRect().height
+console.log(navheight)
+
+const stickyNavi = function (entries) {
+    const [entry] = entries
+    if (!entry.isIntersecting) nav.classList.add('sticky')
+    else nav.classList.remove('sticky')
+    // console.log(entry)
+};
+
+const headerObserver = new IntersectionObserver(stickyNavi, { rootMargin: `-${navheight}px` });
+headerObserver.observe(header)
+
