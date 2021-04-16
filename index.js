@@ -28,3 +28,23 @@ const stickyNavi = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNavi, { rootMargin: `-${navheight}px` });
 headerObserver.observe(header)
 
+//Section animation 
+
+const allSection = document.querySelectorAll('.section')
+const slideInSection = function (entries, observer) {
+    const [entry] = entries
+
+    console.log(entry.target)
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove('section--hidden')
+    // observer.unobserve(entry.target)
+
+}
+
+const sectionObserver = new IntersectionObserver(slideInSection, { root: null, threshold: .2 })
+
+allSection.forEach(section => {
+    sectionObserver.observe(section)
+    section.classList.add('section--hidden')
+
+})
