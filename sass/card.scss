@@ -4,8 +4,9 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  grid-gap: 10rem;
+  grid-gap: 5rem;
   justify-content: center;
+  text-align: center;
   @include respond(tab-port) {
     grid-template-columns: min-content min-content;
   }
