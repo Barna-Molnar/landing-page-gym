@@ -12,7 +12,9 @@
       margin: 0 3rem; } }
   .features__img {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    filter: blur(0);
+    transition: all 0.5s; }
   .features__feature {
     align-self: center;
     justify-self: center;
@@ -21,6 +23,9 @@
   .features__header {
     font-size: 2rem;
     margin-bottom: 1rem; }
+
+.blur {
+  filter: blur(3px); }
 
 :root {
   --color-primary: #c69963;
@@ -181,14 +186,6 @@ h4 {
     align-items: start;
     justify-items: start;
     padding: 0 3rem; }
-    .header__title__text-container {
-      display: flex;
-      position: relative;
-      width: 30vw;
-      justify-content: center;
-      align-items: center; }
-    .header__title h1 {
-      color: #fff; }
   .header__img {
     width: 100%;
     grid-column: 2 / 3;

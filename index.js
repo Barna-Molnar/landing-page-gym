@@ -37,7 +37,7 @@ const slideInSection = function (entries, observer) {
     console.log(entry.target)
     if (!entry.isIntersecting) return;
     entry.target.classList.remove('section--hidden')
-    // observer.unobserve(entry.target)
+    observer.unobserve(entry.target)
 
 }
 
@@ -47,4 +47,25 @@ allSection.forEach(section => {
     sectionObserver.observe(section)
     section.classList.add('section--hidden')
 
+})
+
+const allImg = document.querySelectorAll('.features__img')
+console.log(allImg)
+
+const removeBlur = function (entries, observer) {
+    const [entry] = entries
+
+    if (!entry.isIntersecting) return
+    else entry.target.classList.remove('blur')
+    observer.unobserve(entry.target)
+
+
+}
+
+
+const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .8 })
+
+allImg.forEach(img => {
+    imgObserver.observe(img)
+    img.classList.add('blur')
 })
