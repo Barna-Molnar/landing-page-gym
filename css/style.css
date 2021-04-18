@@ -105,7 +105,7 @@ h4 {
 .section-membership {
   background-color: #37383d;
   background-color: #f3f3f3;
-  padding: 10rem 3rem; }
+  padding: 10rem 15rem; }
 
 .nav {
   /* background-color: red; */
@@ -153,14 +153,14 @@ h4 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
   box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.2);
-  background-color: rgba(252, 60, 1, 0.85); }
+  background-color: rgba(252, 60, 1, 0.85);
+  color: #fff;
+  border-radius: 5rem; }
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
   transform: translateY(-2px);
   box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.2);
-  color: inherit;
-  color: #333;
   background-color: #fd424b; }
 
 .nav.sticky {
