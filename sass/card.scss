@@ -25,12 +25,24 @@
   width: 30rem;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.02);
+  // background-image: url('../img/cardBck.png');
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: bottom;
   overflow: hidden;
 
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
+  img {
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
 
   &__content {
     width: 100%;
@@ -39,6 +51,7 @@
     grid-template-columns: repeat(5, calc(100% / 5));
     grid-template-rows: repeat(6, calc(100% / 6));
     position: relative;
+
     h2 {
       grid-row: 1/2;
       grid-column: 1/2;
@@ -60,6 +73,7 @@
       margin-bottom: 1rem;
       padding: 0.5rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      font-weight: 400;
     }
   }
   span {
@@ -70,10 +84,13 @@
     font-size: 1.4rem;
     text-decoration: none;
     padding: 1rem 3rem;
+    font-weight: 400;
 
-    color: #22212173;
+    color: #fff;
+
     border-radius: 5rem;
-    background-image: linear-gradient(to right, pink 90%, red);
+
+    background-image: linear-gradient(to right, #333, #777, #333);
   }
   ::marker {
     content: '';

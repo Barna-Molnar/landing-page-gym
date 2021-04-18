@@ -105,7 +105,6 @@ h4 {
 .section-membership {
   background-color: #37383d;
   background-color: #f3f3f3;
-  border-bottom: 1px solid #444;
   padding: 10rem 3rem; }
 
 .nav {
@@ -264,11 +263,18 @@ h4 {
   width: 30rem;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.02);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px); }
+  .card img {
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    height: auto; }
   .card__content {
     width: 100%;
     height: 100%;
@@ -293,7 +299,8 @@ h4 {
     .card__details li {
       margin-bottom: 1rem;
       padding: 0.5rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      font-weight: 400; }
   .card span {
     grid-column: 2/5;
     grid-row: 6 / 7; }
@@ -301,9 +308,10 @@ h4 {
     font-size: 1.4rem;
     text-decoration: none;
     padding: 1rem 3rem;
-    color: #22212173;
+    font-weight: 400;
+    color: #fff;
     border-radius: 5rem;
-    background-image: linear-gradient(to right, pink 90%, red); }
+    background-image: linear-gradient(to right, #333, #777, #333); }
   .card ::marker {
     content: ''; }
 

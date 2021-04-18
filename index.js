@@ -16,7 +16,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 const header = document.querySelector('.header')
 const nav = document.querySelector('.nav')
 const navheight = nav.getBoundingClientRect().height
-console.log(navheight)
+
 
 const stickyNavi = function (entries) {
     const [entry] = entries
@@ -34,7 +34,7 @@ const allSection = document.querySelectorAll('.section')
 const slideInSection = function (entries, observer) {
     const [entry] = entries
 
-    console.log(entry.target)
+
     if (!entry.isIntersecting) return;
     entry.target.classList.remove('section--hidden')
     observer.unobserve(entry.target)
@@ -56,16 +56,24 @@ const removeBlur = function (entries, observer) {
     const [entry] = entries
 
     if (!entry.isIntersecting) return
-    else entry.target.classList.remove('blur')
+
+    else {
+
+        console.log(entry.target)
+
+        entry.target.classList.remove('blur')
+    }
+
     observer.unobserve(entry.target)
 
 
 }
 
 
-const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .8 })
+const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .7 })
 
 allImg.forEach(img => {
     imgObserver.observe(img)
     img.classList.add('blur')
+
 })
