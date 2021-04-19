@@ -12,7 +12,7 @@ Practicing some of the techniques I have learned and creating something new that
 
 
 ## Features
-This website currently in progress
+This website is currently in progress
 
 
 
