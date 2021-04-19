@@ -12,7 +12,10 @@ Practicing some of the techniques I have learned and creating something new that
 
 
 ## Features
-This website is currently in progress
+This website is currently in progress but...
+
+The project can be seen : [GitHub Pages](https://barna-molnar.github.io/landing-page-gym/).
+
 
 
 
