@@ -8,6 +8,7 @@ Practicing some of the techniques I have learned and creating something new that
 
 ## Tech/framework used
  Html, Css, Scss, JS.
+ - a broader description about the used technology is coming soon
 
 
 
