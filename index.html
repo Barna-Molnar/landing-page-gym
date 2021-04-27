@@ -33,7 +33,7 @@
           </li>
           <li class="nav__item">
             <a
-              class="nav__link nav__link--btn btn--show-modal"
+              class="nav__link nav__link--btn btn--show-popup"
               href="#membership"
               >MemberShip</a
             >
@@ -58,6 +58,65 @@
         />
       </div>
     </header>
+    <section class="section section-membership" id="membership">
+      <div class="section__title">
+        <h2 class="section__description">Membership</h2>
+        <h3 class="section__header">Our offer for you...</h3>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card__content">
+            <img src="./img/cardBck.png" alt="" />
+            <h2>1</h2>
+            <h3>Basic</h3>
+            <div class="card__details">
+              <ul>
+                <li>1 trainig / day</li>
+                <li>Up to 2hours</li>
+                <li>2 free training</li>
+                <li>Unlimited drinks</li>
+                <li>Usage from Sauna</li>
+              </ul>
+            </div>
+            <span><a href="#">Membership</a></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__content">
+            <img src="./img/cardBck.png" alt="" />
+            <h2>2</h2>
+            <h3>Advance</h3>
+            <div class="card__details">
+              <ul>
+                <li>2 trainig / day</li>
+                <li>Up to 2hours</li>
+                <li>4 free training</li>
+                <li>Unlimited drinks</li>
+                <li>Usage from Spa</li>
+              </ul>
+            </div>
+            <span><a href="#">Membership</a></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__content">
+            <img src="./img/cardBck.png" alt="" />
+            <h2>3</h2>
+            <h3>Pro</h3>
+            <div class="card__details">
+              <ul>
+                <li>Unlimited trainig / day</li>
+                <li>Unlimited hours</li>
+                <li>Unlimited courses</li>
+                <li>Unlimited drinks</li>
+                <li>Usage from Spa</li>
+              </ul>
+            </div>
+            <span><a href="#">Membership</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section" id="section--1">
       <div class="section__title">
         <h2 class="section__description">Features</h2>
@@ -175,65 +234,7 @@
         </figure>
       </div>
     </section>
-    <section class="section section-membership" id="membership">
-      <div class="section__title">
-        <h2 class="section__description">Membership</h2>
-        <h3 class="section__header">Our offer for you...</h3>
-      </div>
-      <div class="card-container">
-        <div class="card">
-          <div class="card__content">
-            <img src="./img/cardBck.png" alt="" />
-            <h2>1</h2>
-            <h3>Basic</h3>
-            <div class="card__details">
-              <ul>
-                <li>1 trainig / day</li>
-                <li>Up to 2hours</li>
-                <li>2 free training</li>
-                <li>Unlimited drinks</li>
-                <li>Usage from Sauna</li>
-              </ul>
-            </div>
-            <span><a href="#">Membership</a></span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__content">
-            <img src="./img/cardBck.png" alt="" />
-            <h2>2</h2>
-            <h3>Advance</h3>
-            <div class="card__details">
-              <ul>
-                <li>2 trainig / day</li>
-                <li>Up to 2hours</li>
-                <li>4 free training</li>
-                <li>Unlimited drinks</li>
-                <li>Usage from Spa</li>
-              </ul>
-            </div>
-            <span><a href="#">Membership</a></span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__content">
-            <img src="./img/cardBck.png" alt="" />
-            <h2>3</h2>
-            <h3>Pro</h3>
-            <div class="card__details">
-              <ul>
-                <li>Unlimited trainig / day</li>
-                <li>Unlimited hours</li>
-                <li>Unlimited courses</li>
-                <li>Unlimited drinks</li>
-                <li>Usage from Spa</li>
-              </ul>
-            </div>
-            <span><a href="#">Membership</a></span>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <footer class="footer section">
       <span class="footer__icon"><i class="fas fa-dumbbell"></i></span>
       <ul class="footer__nav">
@@ -265,6 +266,20 @@
       </p>
     </footer>
 
+    <div class="popup hidden">
+      <button class="btn--close">&times;</button>
+      <h2 class="popup__header">Get a Membership</h2>
+      <form action="#" class="popup__form">
+        <label for="#">First Name</label>
+        <input type="text" autofocus />
+        <label for="#">Last Name</label>
+        <input type="text" />
+        <label for="#">Email adress</label>
+        <input type="text" />
+        <button class="btn">Get it &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll('.card'), {

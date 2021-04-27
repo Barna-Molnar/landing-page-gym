@@ -27,6 +27,22 @@
 .blur {
   filter: blur(3px); }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: all 0.5s; }
+
+.hidden {
+  visibility: hidden;
+  opacity: 0; }
+
 :root {
   --color-primary: #c69963;
   --color-primary-dark: #b28451;
@@ -290,6 +306,8 @@ h4 {
     grid-template-columns: repeat(5, calc(100% / 5));
     grid-template-rows: repeat(6, calc(100% / 6));
     position: relative; }
+    .card__content span {
+      cursor: pointer; }
     .card__content h2 {
       grid-row: 1/2;
       grid-column: 1/2;
@@ -347,3 +365,59 @@ h4 {
     font-size: 1.4rem;
     color: #aaa;
     text-align: center; }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 6rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s; }
+  .popup .btn--close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3em;
+    cursor: pointer;
+    border: none;
+    background: none; }
+  .popup__header {
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
+  .popup__form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 4rem;
+    align-items: center;
+    grid-gap: 2rem; }
+    .popup__form label {
+      font-size: 1.7rem;
+      font-weight: 600; }
+    .popup__form input {
+      font-size: 1.7rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem; }
+    .popup__form input:focus {
+      outline: none;
+      border-bottom: 1px solid rgba(243, 107, 107, 0.678); }
+    .popup__form button {
+      grid-column: 1/-1;
+      justify-self: center;
+      padding: 0.5rem 3.5rem;
+      border-radius: 5rem;
+      color: #3b3939;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.5s;
+      box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.2);
+      background-color: rgba(252, 60, 1, 0.85);
+      color: #fff;
+      border-radius: 5rem; }
+    .popup__form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.2);
+      background-color: #fd424b; }

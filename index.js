@@ -41,13 +41,13 @@ const slideInSection = function (entries, observer) {
 
 }
 
-const sectionObserver = new IntersectionObserver(slideInSection, { root: null, threshold: .2 })
+const sectionObserver = new IntersectionObserver(slideInSection, { root: null, threshold: .15 })
 
-allSection.forEach(section => {
-    sectionObserver.observe(section)
-    section.classList.add('section--hidden')
+// allSection.forEach(section => {
+//     sectionObserver.observe(section)
+//     section.classList.add('section--hidden')
 
-})
+// })
 
 const allImg = document.querySelectorAll('.features__img')
 console.log(allImg)
@@ -76,4 +76,32 @@ allImg.forEach(img => {
     imgObserver.observe(img)
     img.classList.add('blur')
 
+});
+
+
+/// popup functionality 
+const popupWindow = document.querySelector('.popup')
+const btnClosePopup = document.querySelector('.btn--close')
+const btnMembershipNav = document.querySelector('.btn--show-popup')
+const cards = document.querySelectorAll('.card')
+const overlay = document.querySelector('.overlay')
+
+console.log(overlay)
+btnMembershipNav.addEventListener('click', () => {
+    // popupWindow.classList.remove('hidden')
+})
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        popupWindow.classList.remove('hidden')
+        overlay.classList.remove('hidden')
+
+    })
+})
+
+
+
+btnClosePopup.addEventListener('click', () => {
+    popupWindow.classList.add('hidden')
+    overlay.classList.add('hidden')
 })
