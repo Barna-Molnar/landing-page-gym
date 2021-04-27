@@ -43,11 +43,11 @@ const slideInSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(slideInSection, { root: null, threshold: .15 })
 
-// allSection.forEach(section => {
-//     sectionObserver.observe(section)
-//     section.classList.add('section--hidden')
+allSection.forEach(section => {
+    sectionObserver.observe(section)
+    section.classList.add('section--hidden')
 
-// })
+})
 
 const allImg = document.querySelectorAll('.features__img')
 console.log(allImg)
