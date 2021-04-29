@@ -22,7 +22,7 @@ const stickyNavi = function (entries) {
     const [entry] = entries
     if (!entry.isIntersecting) nav.classList.add('sticky')
     else nav.classList.remove('sticky')
-    // console.log(entry)
+
 };
 
 const headerObserver = new IntersectionObserver(stickyNavi, { rootMargin: `-${navheight}px` });
@@ -30,10 +30,11 @@ headerObserver.observe(header)
 
 //Section animation 
 
+
 const allSection = document.querySelectorAll('.section')
 const slideInSection = function (entries, observer) {
     const [entry] = entries
-
+    console.log(entry)
 
     if (!entry.isIntersecting) return;
     entry.target.classList.remove('section--hidden')
@@ -70,7 +71,7 @@ const removeBlur = function (entries, observer) {
 }
 
 
-const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .7 })
+const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .5 })
 
 allImg.forEach(img => {
     imgObserver.observe(img)
@@ -106,3 +107,15 @@ btnClosePopup.addEventListener('click', () => {
     overlay.classList.add('hidden')
 })
 
+// scroll down arrow functionality 
+const arrowIcon = document.querySelector('.downArrow');
+console.log(arrowIcon)
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 130) {
+        arrowIcon.style.opacity = 0
+    }
+    if (window.scrollY < 30) {
+        arrowIcon.style.opacity = 1
+    }
+
+})

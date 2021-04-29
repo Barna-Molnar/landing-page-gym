@@ -49,21 +49,15 @@
 .nav__link--btn:visited {
   padding: 0 1.5rem;
   border-radius: 5rem;
-
+  transform: scale(1);
   color: rgb(59, 57, 57);
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(#fc3c01, 0.85);
   transition: all 0.5s;
   box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.2);
-
-  //   background: linear-gradient(90deg, #000, #fff, #000);
-  // background-color: rgba(#fc3c01, 0.85);
-  color: #fff;
   color: inherit;
   border-radius: 5rem;
   @include respond(tab-port) {
     padding: 0 1rem;
-    // font-size: 1.2rem;
   }
   // background-image: linear-gradient(to right, #333, #777, #333);
 }
@@ -72,10 +66,6 @@
 .nav__link--btn:active {
   transform: translateY(-2px);
   box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.2);
-  // color: inherit;
-  // color: #333;
-  background-color: #fd424b;
-  color: #fff;
 }
 
 .nav.sticky {
