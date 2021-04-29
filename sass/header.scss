@@ -28,9 +28,12 @@
     }
   }
   &__img {
-    width: 100%;
+    width: auto;
     grid-column: 2 / 3;
     grid-row: 1 / span 4;
+    height: 30vh;
+    // border-radius: 0.5rem;
+    // box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.8);
   }
 }
 

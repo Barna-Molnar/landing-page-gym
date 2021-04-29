@@ -105,3 +105,4 @@ btnClosePopup.addEventListener('click', () => {
     popupWindow.classList.add('hidden')
     overlay.classList.add('hidden')
 })
+

@@ -54,3 +54,19 @@
   visibility: hidden;
   opacity: 0;
 }
+.downArrow::before {
+  position: absolute;
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background-color: black;
+  transform: rotateY(0deg) rotate(45deg);
+}
+.downArrow::after {
+  position: absolute;
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background-color: black;
+  transform: rotateY(0deg) rotate(-45deg);
+}

@@ -30,7 +30,7 @@
     margin-left: 5rem;
   }
   @include respond(tab-port) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
   }
 }
@@ -47,20 +47,24 @@
 
 .nav__link--btn:link,
 .nav__link--btn:visited {
-  padding: 0.3rem 2.5rem;
+  padding: 0 1.5rem;
   border-radius: 5rem;
 
   color: rgb(59, 57, 57);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(#fc3c01, 0.85);
   transition: all 0.5s;
   box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.2);
 
   //   background: linear-gradient(90deg, #000, #fff, #000);
-  background-color: rgba(#fc3c01, 0.85);
+  // background-color: rgba(#fc3c01, 0.85);
   color: #fff;
-
+  color: inherit;
   border-radius: 5rem;
-
+  @include respond(tab-port) {
+    padding: 0 1rem;
+    // font-size: 1.2rem;
+  }
   // background-image: linear-gradient(to right, #333, #777, #333);
 }
 
@@ -71,6 +75,7 @@
   // color: inherit;
   // color: #333;
   background-color: #fd424b;
+  color: #fff;
 }
 
 .nav.sticky {
