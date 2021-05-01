@@ -119,3 +119,17 @@ window.addEventListener('scroll', () => {
     }
 
 })
+
+// burger menu
+var menu = document.querySelector('.nav__toggler__list');
+var burger = document.querySelector('.burger');
+burger.addEventListener('click', () => {
+    console.log(burger)
+    burger.classList.toggle('burger--active');
+    menu.classList.toggle('nav__toggler__list--active');
+});
+
+// var openMenu = function () {
+//     burger.classList.toggle('burger--active');
+//     menu.classList.toggle('nav__toggler__list--active');
+// };

@@ -7,10 +7,11 @@
   margin: 0 12rem;
   @include respond(tab-land) {
     margin: 0 6rem;
+    grid-gap: 1rem;
   }
   @include respond(tab-port) {
     margin: 0 3rem;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
   }
   &__item {
     &--1 {

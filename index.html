@@ -17,6 +17,31 @@
   </head>
 
   <body>
+    <nav class="nav__toggler">
+      <div class="burger">
+        <div class="burger__patty"></div>
+      </div>
+      <ul class="nav__toggler__list">
+        <li class="nav__toggler__item">
+          <a href="#1" class="nav__toggler__link"
+            ><i class="fa fa-camera-retro"></i
+          ></a>
+        </li>
+        <li class="nav__toggler__item">
+          <a href="#2" class="nav__toggler__link"><i class="fa fa-bolt"></i></a>
+        </li>
+        <li class="nav__toggler__item">
+          <a href="#3" class="nav__toggler__link"
+            ><i class="fa fa-music"></i
+          ></a>
+        </li>
+        <li class="nav__toggler__item">
+          <a href="#4" class="nav__toggler__link"
+            ><i class="fa fa-paper-plane"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
     <header class="header">
       <nav class="nav">
         <!-- <img src="#" alt="#" class="nav__logo" id="logo" designer="Barnabas Molnar" data-version-number='3.0' /> -->
@@ -292,8 +317,8 @@
       VanillaTilt.init(document.querySelectorAll('.card'), {
         max: 25,
         speed: 400,
-        glare: true,
-        'max-glare': 1,
+        // glare: true,
+        // 'max-glare': 1,
       });
     </script>
     <script src="./index.js"></script>
