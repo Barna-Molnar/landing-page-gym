@@ -41,7 +41,8 @@
 
 .hidden {
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  display: none; }
 
 .downArrow {
   display: flex;
@@ -232,7 +233,11 @@ h4 {
   width: 100vw;
   backface-visibility: hidden;
   display: grid;
-  grid-template-columns: min-content 1fr; }
+  grid-template-columns: min-content 1fr;
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .nav__toggler {
+      display: grid; } }
   .nav__toggler ul {
     list-style-type: none;
     padding: 0;
@@ -247,7 +252,7 @@ h4 {
     .nav__toggler__list--active {
       transform: translate(0, 0); }
     .nav__toggler__list a {
-      color: white; }
+      color: #e68568; }
   .nav__toggler__item {
     flex: 1;
     position: relative; }
@@ -268,8 +273,8 @@ h4 {
       background: #32383b; }
 
 .burger {
-  height: 8vh;
-  width: 8vw;
+  height: 6vh;
+  width: 8rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -284,7 +289,8 @@ h4 {
     position: relative;
     height: 2px;
     width: 40px;
-    background: white; }
+    background: white;
+    transform: scale(0.8); }
     .burger__patty:before {
       content: '';
       position: absolute;
@@ -305,18 +311,17 @@ h4 {
     will-change: transform;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .burger--active .burger__patty {
-    transform: rotate(360deg); }
+    transform: rotate(0deg) scale(0.6);
+    background: #e68568;
+    height: 3px; }
     .burger--active .burger__patty:before {
-      transform: rotate(-45deg) translate(-7px, -7px) scaleX(0.7); }
+      height: 3px;
+      background: #e68568;
+      transform: rotate(-46deg) translate(-7px, -7px) scaleX(0.7); }
     .burger--active .burger__patty:after {
-      transform: rotate(45deg) translate(-7px, 7px) scaleX(0.7); }
-  @media (max-width: 640px) {
-    .burger {
-      height: 10vh; }
-      .burger__patty {
-        transform: scale(0.8); }
-      .burger--active .burger__patty {
-        transform: scale(0.8) rotate(90deg); } }
+      height: 3px;
+      background: #e68568;
+      transform: rotate(46deg) translate(-7px, 7px) scaleX(0.7); }
 
 /* HEADER */
 .header {

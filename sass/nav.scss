@@ -97,6 +97,10 @@ $content-animation: scale(0.7);
 
   display: grid;
   grid-template-columns: min-content 1fr;
+  display: none;
+  @include respond(phone) {
+    display: grid;
+  }
   ul {
     list-style-type: none;
     padding: 0;
@@ -115,7 +119,7 @@ $content-animation: scale(0.7);
       transform: translate(0, 0);
     }
     a {
-      color: white;
+      color: $red;
     }
   }
 
@@ -137,7 +141,7 @@ $content-animation: scale(0.7);
     text-decoration: none;
     font-size: 1.8rem;
     background: #2b3033;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: $ease;
 
     &:hover {
       background: mix(black, #373e42, 10);
@@ -145,14 +149,14 @@ $content-animation: scale(0.7);
   }
 }
 .burger {
-  height: 8vh;
-  width: 8vw;
+  height: 6vh;
+  width: 8rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background: $nav-bg;
+  background: rgba($nav-bg, 1);
   cursor: pointer;
   transition: $ease;
 
@@ -165,6 +169,7 @@ $content-animation: scale(0.7);
     height: 2px;
     width: 40px;
     background: white;
+    transform: scale(0.8);
 
     &:before {
       content: '';
@@ -196,28 +201,32 @@ $content-animation: scale(0.7);
 
   &--active {
     .burger__patty {
-      transform: rotate(360deg);
+      transform: rotate(-0deg) scale(0.6);
+      background: $red;
+      height: 3px;
       &:before {
-        transform: rotate(-45deg) translate(-7px, -7px) scaleX(0.7);
+        height: 3px;
+        background: $red;
+        transform: rotate(-46deg) translate(-7px, -7px) scaleX(0.7);
       }
 
       &:after {
-        transform: rotate(45deg) translate(-7px, 7px) scaleX(0.7);
+        height: 3px;
+        background: $red;
+        transform: rotate(46deg) translate(-7px, 7px) scaleX(0.7);
       }
     }
   }
 
-  @media (max-width: 640px) {
-    height: 10vh;
+  // @media (max-width: 640px) {
+  //   &__patty {
+  //     transform: scale(0.8);
+  //   }
 
-    &__patty {
-      transform: scale(0.8);
-    }
-
-    &--active {
-      .burger__patty {
-        transform: scale(0.8) rotate(90deg);
-      }
-    }
-  }
+  //   &--active {
+  //     .burger__patty {
+  //       transform: scale(0.6) rotate(360deg);
+  //     }
+  //   }
+  // }
 }
