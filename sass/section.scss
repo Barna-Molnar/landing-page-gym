@@ -13,7 +13,6 @@
   &__title {
     max-width: 80rem;
     margin: 0 auto 8rem auto;
-    /* background-color: red; */
   }
   &__description {
     font-size: 1.8rem;
@@ -32,6 +31,7 @@
 .section-membership {
   background-color: #37383d;
   background-color: #f3f3f3;
+  position: relative;
 
   padding: 10rem 15rem;
 }

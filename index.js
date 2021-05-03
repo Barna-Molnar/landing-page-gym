@@ -42,7 +42,7 @@ const slideInSection = function (entries, observer) {
 
 }
 
-const sectionObserver = new IntersectionObserver(slideInSection, { root: null, threshold: .15 })
+const sectionObserver = new IntersectionObserver(slideInSection, { root: null, threshold: .1 })
 
 allSection.forEach(section => {
     sectionObserver.observe(section)
@@ -71,7 +71,7 @@ const removeBlur = function (entries, observer) {
 }
 
 
-const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .5 })
+const imgObserver = new IntersectionObserver(removeBlur, { root: null, threshold: .4 })
 
 allImg.forEach(img => {
     imgObserver.observe(img)
