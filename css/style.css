@@ -155,7 +155,18 @@ h4 {
   background-color: #37383d;
   background-color: #f3f3f3;
   position: relative;
+  background-image: url("../img/pexels-lukas-669577.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -30rem;
   padding: 10rem 15rem; }
+  .section-membership img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; }
 
 .nav {
   width: 100%;
@@ -323,7 +334,7 @@ h4 {
 /* HEADER */
 .header {
   padding: 0 3rem;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -468,7 +479,7 @@ h4 {
       grid-row: 1/2;
       margin: 2rem 0 0 0; }
   .card__details {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     grid-column: 2/5;
     grid-row: 2/6;
     margin-top: 1rem; }

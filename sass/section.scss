@@ -31,7 +31,20 @@
 .section-membership {
   background-color: #37383d;
   background-color: #f3f3f3;
+
   position: relative;
+  background-image: url('../img/pexels-lukas-669577.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -30rem;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
 
   padding: 10rem 15rem;
 }
