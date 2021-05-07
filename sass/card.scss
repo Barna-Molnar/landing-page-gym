@@ -1,6 +1,5 @@
 @import './mixin.scss';
-#membership {
-}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, min-content);
@@ -14,6 +13,7 @@
   }
   @include respond(phone) {
     grid-template-columns: min-content;
+    grid-gap: 8rem;
   }
 }
 
@@ -23,7 +23,8 @@
   width: 30rem;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 1.5rem;
-  background: rgba(0, 0, 0, 0.02);
+  // background: rgba(0, 0, 0, 0.02);
+  background: rgba(255, 255, 255, 0.5);
   // background-image: url('../img/cardBck.png');
   // background-size: contain;
   // background-repeat: no-repeat;
@@ -33,15 +34,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
-
-  img {
-    opacity: 0.1;
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-    width: 100%;
-    height: auto;
-  }
 
   &__content {
     width: 100%;

@@ -81,7 +81,7 @@
 // Hamburger menu
 $nav-bg: #2b3033;
 $blue: #5fc7ea;
-$red: #e68568;
+$red: #eb4614;
 $yellow: #e6d068;
 $green: #68e6ac;
 $ease: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -111,7 +111,7 @@ $content-animation: scale(0.7);
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    transform: translate(-100%, 0%);
+    transform: translate(-125%, 0%);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     &--active {
@@ -119,6 +119,7 @@ $content-animation: scale(0.7);
     }
     a {
       color: $red;
+      color: white;
     }
   }
 
@@ -139,11 +140,14 @@ $content-animation: scale(0.7);
     left: 0;
     text-decoration: none;
     font-size: 1.8rem;
-    background: #2b3033;
+    background: #000000;
     transition: $ease;
+    border-right: 1px solid rgba(85, 85, 85, 0.411);
+    border-bottom: 1px solid rgba(85, 85, 85, 0.411);
 
     &:hover {
-      background: mix(black, #373e42, 10);
+      // background: mix(black, #373e42, 10);
+      background: #202024;
     }
   }
 }
@@ -158,9 +162,10 @@ $content-animation: scale(0.7);
   // background: rgba($nav-bg, 1);
   cursor: pointer;
   transition: $ease;
+  border: 1px solid rgba(85, 85, 85, 0.363);
 
   &:hover {
-    background: mix(black, #373e42, 10);
+    // background: mix(black, #373e42, 10);
   }
 
   &__patty {
@@ -203,6 +208,7 @@ $content-animation: scale(0.7);
       transform: rotate(-0deg) scale(0.6);
       background: $red;
       height: 3px;
+
       &:before {
         height: 3px;
         background: $red;

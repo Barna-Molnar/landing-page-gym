@@ -13,6 +13,15 @@
   @include respond(tab-port) {
     margin: 0 3rem;
   }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    .img-container--1 {
+      grid-row: 2/3;
+    }
+    .img-container--3 {
+      grid-row: 6/7;
+    }
+  }
   &__img {
     height: 100%;
     width: 100%;
@@ -26,6 +35,8 @@
     justify-self: center;
     width: 70%;
     font-size: 1.5rem;
+    @include respond(phone) {
+    }
   }
   &__header {
     font-size: 2rem;

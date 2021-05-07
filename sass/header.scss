@@ -6,44 +6,47 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-image: url('../img/anastase-maragos-9dzWZQWZMdE-unsplash.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position-y: -40rem;
-  background-position-x: -8rem;
+  // background-position-y: -20rem;
+  background-position: center;
+  // background-position-x: -2rem;
+  object-fit: contain;
   background-color: black;
   overflow: hidden;
   color: white;
+  margin-top: 0;
   @include respond(tab-land) {
-    height: 80vh;
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
   &__title {
-    flex: 1;
-    max-width: 150rem;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    row-gap: 3rem;
-    align-content: center;
-    justify-content: center;
-    align-items: start;
-    justify-items: start;
-    padding: 0 6rem;
+    max-width: 100rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 30rem auto auto;
+
+    h4 {
+      margin: 2rem 0 4rem 0;
+    }
+
+    // flex: 1;
+    // max-width: 150rem;
+    // display: grid;
+    // // grid-template-columns: 3fr 2fr;
+    // // grid-template-columns: 1fr;
+    // row-gap: 3rem;
+    // align-content: center;
+    // justify-content: center;
+    // align-items: start;
+    // justify-items: start;
+    // padding: 0 6rem;
     @include respond(tab-port) {
-      display: flex;
-      flex-direction: column;
+      margin: 8rem auto auto;
       padding: 0 3rem;
     }
-  }
-  &__img {
-    width: auto;
-    grid-column: 2 / 3;
-    grid-row: 1 / span 4;
-    height: 30vh;
-    // border-radius: 0.5rem;
-    // box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.8);
-    display: none;
   }
 }
 

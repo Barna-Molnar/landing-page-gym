@@ -10,6 +10,13 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
         document.querySelector(idOfSection).scrollIntoView({ behavior: "smooth" })
     }
 });
+///header btn smooth scroll 
+document.querySelector('.btn-header').addEventListener('click', function (e) {
+    e.preventDefault()
+    const idOfSection = e.target.getAttribute('href')
+    document.querySelector(idOfSection).scrollIntoView({ behavior: "smooth" })
+
+})
 
 // Navigation sticky
 
