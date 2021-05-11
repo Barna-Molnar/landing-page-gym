@@ -86,7 +86,7 @@ $blue: #5fc7ea;
 $red: #eb4614;
 $yellow: #e6d068;
 $green: #68e6ac;
-$ease: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$ease: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $content-animation: scale(0.7);
 .nav__toggler {
   position: fixed;
@@ -107,30 +107,6 @@ $content-animation: scale(0.7);
     padding: 0;
     margin: 0;
   }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    transform: translate(-125%, 0%);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &--active {
-      transform: translate(0, 0);
-    }
-    a {
-      color: $red;
-      color: white;
-    }
-  }
-
-  &__item {
-    flex: 1;
-    position: relative;
-    // border-right: 1px solid #777;
-  }
-
   &__link {
     display: flex;
     justify-content: center;
@@ -144,13 +120,48 @@ $content-animation: scale(0.7);
     font-size: 1.8rem;
     background: #000000;
     transition: $ease;
-    border-right: 1px solid rgba(85, 85, 85, 0.411);
-    border-bottom: 1px solid rgba(85, 85, 85, 0.411);
+    // border-right: 1px solid rgba(85, 85, 85, 0.411);
+    // border-bottom: 1px solid rgba(85, 85, 85, 0.411);
 
     &:hover {
       // background: mix(black, #373e42, 10);
       background: #202024;
     }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    // transform: translate(-125%, 0%);
+    // transform: translate(0%, 0%);
+    transform: rotateX(180deg);
+
+    // transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.7s ease-out;
+    color: black;
+    background-color: black;
+
+    &--active {
+      // transform: translate(0, 0);
+      transform: rotateX(0deg) translate3d(0rem, 0rem, 0rem);
+      color: white;
+      .nav__toggler__link {
+        border-right: 1px solid rgba(85, 85, 85, 0.411);
+        border-bottom: 1px solid rgba(85, 85, 85, 0.411);
+        border-left: 1px solid rgba(85, 85, 85, 0.411);
+      }
+    }
+    a {
+      color: inherit;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    position: relative;
+    // border-right: 1px solid #777;
   }
 }
 .burger {
@@ -165,7 +176,7 @@ $content-animation: scale(0.7);
 
   cursor: pointer;
   transition: $ease;
-  border: 1px solid rgba(85, 85, 85, 0.363);
+  // border: 1px solid rgba(85, 85, 85, 0.363);
 
   &:hover {
     // background: mix(black, #373e42, 10);
@@ -208,7 +219,7 @@ $content-animation: scale(0.7);
 
   &--active {
     .burger__patty {
-      transform: rotate(-0deg) scale(0.6);
+      transform: rotate(90deg) scale(0.6);
       background: $red;
       height: 3px;
 

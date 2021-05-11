@@ -267,21 +267,6 @@ h4 {
     list-style-type: none;
     padding: 0;
     margin: 0; }
-  .nav__toggler__list {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    transform: translate(-125%, 0%);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-    .nav__toggler__list--active {
-      transform: translate(0, 0); }
-    .nav__toggler__list a {
-      color: #eb4614;
-      color: white; }
-  .nav__toggler__item {
-    flex: 1;
-    position: relative; }
   .nav__toggler__link {
     display: flex;
     justify-content: center;
@@ -294,11 +279,30 @@ h4 {
     text-decoration: none;
     font-size: 1.8rem;
     background: #000000;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-right: 1px solid rgba(85, 85, 85, 0.411);
-    border-bottom: 1px solid rgba(85, 85, 85, 0.411); }
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
     .nav__toggler__link:hover {
       background: #202024; }
+  .nav__toggler__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(180deg);
+    transition: all 0.7s ease-out;
+    color: black;
+    background-color: black; }
+    .nav__toggler__list--active {
+      transform: rotateX(0deg) translate3d(0rem, 0rem, 0rem);
+      color: white; }
+      .nav__toggler__list--active .nav__toggler__link {
+        border-right: 1px solid rgba(85, 85, 85, 0.411);
+        border-bottom: 1px solid rgba(85, 85, 85, 0.411);
+        border-left: 1px solid rgba(85, 85, 85, 0.411); }
+    .nav__toggler__list a {
+      color: inherit; }
+  .nav__toggler__item {
+    flex: 1;
+    position: relative; }
 
 .burger {
   height: 6vh;
@@ -310,8 +314,7 @@ h4 {
   z-index: 2;
   background: black;
   cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(85, 85, 85, 0.363); }
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .burger__patty {
     position: relative;
     height: 2px;
@@ -336,9 +339,9 @@ h4 {
       background: white; }
   .burger__patty, .burger__patty:before, .burger__patty:after {
     will-change: transform;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .burger--active .burger__patty {
-    transform: rotate(0deg) scale(0.6);
+    transform: rotate(90deg) scale(0.6);
     background: #eb4614;
     height: 3px; }
     .burger--active .burger__patty:before {
