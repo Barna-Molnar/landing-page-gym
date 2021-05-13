@@ -66,15 +66,11 @@ const removeBlur = function (entries, observer) {
     if (!entry.isIntersecting) return
 
     else {
-
         console.log(entry.target)
-
         entry.target.classList.remove('blur')
     }
 
     observer.unobserve(entry.target)
-
-
 }
 
 
@@ -106,9 +102,6 @@ cards.forEach(card => {
 
     })
 })
-
-
-
 btnClosePopup.addEventListener('click', () => {
     popupWindow.classList.add('hidden')
     overlay.classList.add('hidden')

@@ -8,9 +8,7 @@
   background-image: url('../img/anastase-maragos-9dzWZQWZMdE-unsplash.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  // background-position-y: -20rem;
   background-position: center;
-  // background-position-x: -2rem;
   object-fit: contain;
   background-color: black;
   overflow: hidden;
@@ -34,18 +32,6 @@
       margin-top: auto;
       margin-bottom: 2rem;
     }
-
-    // flex: 1;
-    // max-width: 150rem;
-    // display: grid;
-    // // grid-template-columns: 3fr 2fr;
-    // // grid-template-columns: 1fr;
-    // row-gap: 3rem;
-    // align-content: center;
-    // justify-content: center;
-    // align-items: start;
-    // justify-items: start;
-    // padding: 0 6rem;
     @include respond(tab-port) {
       margin: 8rem auto auto;
       padding: 0 3rem;
