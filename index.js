@@ -130,8 +130,11 @@ window.addEventListener('scroll', () => {
 // burger menu
 const menu = document.querySelector('.nav__toggler__list');
 const burger = document.querySelector('.burger');
+const menuBackSide = document.querySelector('.nav__toggler__list__side--back')
+console.log(menuBackSide)
 const openMenu = function () {
     burger.classList.toggle('burger--active');
     menu.classList.toggle('nav__toggler__list--active');
+    menuBackSide.classList.toggle('nav__toggler__list__side--back--active');
 };
 burger.addEventListener('click', openMenu);
