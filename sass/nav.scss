@@ -9,21 +9,20 @@
   align-items: center;
   z-index: 100;
   background-color: transparent;
-
   transition: background-color 0.3s;
-
-  @include respond(phone) {
-    display: none;
-  }
   p {
     font-size: 2.2rem;
     font-weight: 400;
     color: inherit;
   }
+  @include respond(tab-port) {
+    justify-content: center;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+
   .nav__links {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    // place-items: center;
     display: flex;
     align-items: center;
     list-style: none;
@@ -34,10 +33,6 @@
   }
   .nav__item {
     margin-left: 5rem;
-  }
-  @include respond(tab-port) {
-    // flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
@@ -86,6 +81,7 @@ $blue: #5fc7ea;
 $red: #eb4614;
 $yellow: #e6d068;
 $green: #68e6ac;
+$white: rgb(214, 214, 214);
 $ease: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $content-animation: scale(0.7);
 .nav__toggler {
@@ -95,8 +91,6 @@ $content-animation: scale(0.7);
   left: 0;
   width: 100vw;
   backface-visibility: hidden;
-
-  display: grid;
   grid-template-columns: min-content 1fr;
   display: none;
   @include respond(phone) {
@@ -120,34 +114,39 @@ $content-animation: scale(0.7);
     font-size: 1.8rem;
     background: #000000;
     transition: $ease;
-    // border-right: 1px solid rgba(85, 85, 85, 0.411);
-    // border-bottom: 1px solid rgba(85, 85, 85, 0.411);
-
     &:hover {
-      // background: mix(black, #373e42, 10);
       background: #202024;
     }
   }
-
+  .nav__menu--container {
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+  }
+  &__item {
+    flex: 1;
+    position: relative;
+    a {
+      color: $white;
+    }
+  }
   &__list {
     position: relative;
-
+    top: 0;
+    left: 0;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    // transform: translate(-125%, 0%);
-    // transform: translate(0%, 0%);
     transform: rotateX(180deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    // transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: all 0.7s ease-out;
-    color: black;
+    transition: all 0.7s ease;
+
     background-color: black;
 
     &--active {
-      position: relative; // transform: translate(0, 0);
+      position: relative;
       transform: rotateX(0deg) translate3d(0rem, 0rem, 0rem);
       color: white;
       .nav__toggler__link {
@@ -156,33 +155,27 @@ $content-animation: scale(0.7);
         border-left: 1px solid rgba(85, 85, 85, 0.411);
       }
     }
+
+    /// Nav Backside
     &__side--back {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: turquoise;
+      background-color: black;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
       transform: rotateX(0deg);
-      transition: all 0.7s;
-      border-bottom: 1px solid rgba(85, 85, 85, 0.411);
+      transition: all 0.7s ease;
 
       &--active {
         transform: rotateX(-180deg);
-        // background-color: transparent;
       }
     }
-    a {
-      color: inherit;
-    }
-  }
-
-  &__item {
-    flex: 1;
-    position: relative;
-    // border-right: 1px solid #777;
   }
 }
+// burger
 .burger {
   height: 6vh;
   width: 8rem;
@@ -192,14 +185,8 @@ $content-animation: scale(0.7);
   align-items: center;
   z-index: 2;
   background: black;
-
   cursor: pointer;
   transition: $ease;
-  // border: 1px solid rgba(85, 85, 85, 0.363);
-
-  &:hover {
-    // background: mix(black, #373e42, 10);
-  }
 
   &__patty {
     position: relative;
@@ -237,20 +224,21 @@ $content-animation: scale(0.7);
   }
 
   &--active {
+    border-bottom: 1px solid rgba(85, 85, 85, 0.411);
     .burger__patty {
       transform: rotate(90deg) scale(0.6);
-      background: $red;
+      background: $white;
       height: 3px;
 
       &:before {
         height: 3px;
-        background: $red;
+        background: $white;
         transform: rotate(-46deg) translate(-7px, -7px) scaleX(0.7);
       }
 
       &:after {
         height: 3px;
-        background: $red;
+        background: $white;
         transform: rotate(46deg) translate(-7px, 7px) scaleX(0.7);
       }
     }
